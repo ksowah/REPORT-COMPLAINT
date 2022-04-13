@@ -1,7 +1,4 @@
 
-/* ==========================================================================
-   #FONT
-   ========================================================================== */
 .font-robo {
   font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
 }
@@ -14,9 +11,7 @@
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
 }
 
-/* ==========================================================================
-   #GRID
-   ========================================================================== */
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -112,10 +107,7 @@
 /* ==========================================================================
    #BOX-SIZING
    ========================================================================== */
-/**
- * More sensible default box-sizing:
- * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
- */
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -136,9 +128,7 @@ html {
 /* ==========================================================================
    #RESET
    ========================================================================== */
-/**
- * A very simple reset that sits on top of Normalize.css.
- */
+
 body,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
