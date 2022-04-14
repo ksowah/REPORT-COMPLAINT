@@ -9,7 +9,11 @@
     </style>
   </head>
   <body>
-    <form action="/" class="decor" onsubmit="validate()">
+    <form  class="decor">
+		<div class="alert" role="alert" id="alert">
+			<strong id="alert_head"> </strong> 
+		<span id="error"></span>
+	</div>
       <div class="form-left-decoration"></div>
       <div class="form-right-decoration"></div>
       <div class="circle"></div>
@@ -19,7 +23,7 @@
         <input type="text" placeholder="Student id" id="student_id">
         <input type="text" placeholder="Room Number" id="room_number">
         <textarea placeholder="Report Message..." rows="5" id="message"></textarea>
-        <button type="submit" href="/">Submit</button>
+        <button type="button" onclick="validate()">Submit</button>
       </div>
     </form>
 

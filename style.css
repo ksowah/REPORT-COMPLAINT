@@ -38,6 +38,7 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
 
   .form-inner {
   padding: 40px;
+  padding-top: 0;
   }
   .form-inner input,
   .form-inner textarea {
@@ -68,6 +69,14 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
   button:hover {
   background: #8989bb;
   } 
+
+  .alert {
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+  }
+  
   @media (min-width: 568px) {
   form {
   width: 60%;
