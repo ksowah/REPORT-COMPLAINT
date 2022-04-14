@@ -1,116 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta name="description" content="Colorlib Templates" />
-		<meta name="author" content="Colorlib" />
-		<meta name="keywords" content="Colorlib Templates" />
+<html>
+  <head>
+    <title>Contact us</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <form action="/" class="decor" onsubmit="validate()">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+        <h1>Contact us</h1>
+        <input type="text" placeholder="Name" id="name">
+        <input type="text" placeholder="Student id" id="student_id">
+        <input type="text" placeholder="Room Number" id="room_number">
+        <textarea placeholder="Report Message..." rows="5" id="message"></textarea>
+        <button type="submit" href="/">Submit</button>
+      </div>
+    </form>
 
-		<title>Student</title>
-
-		<!-- Font special for pages-->
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-			rel="stylesheet"
-		/>
-
-		<!-- Main CSS-->
-		<link href="main.css" rel="stylesheet" media="all" />
-	</head>
-
-	<body>
-		<div class="page-wrapper bg-dark p-t-100 p-b-50">
-			<div class="wrapper wrapper--w900">
-				<div class="card card-6">
-					<div class="card-heading">
-						<h2 class="title">Lodge a complaint</h2>
-					</div>
-					<div class="card-body">
-						<form method="POST" onsubmit="validate()">
-							<div class="form-row">
-								<div class="name">Full name</div>
-								<div class="value">
-									<input
-										class="input--style-6"
-										type="text"
-										name="full_name"
-										placeholder="John Doe"
-										id="name"
-									/>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="name">Student id</div>
-								<div class="value">
-									<div class="input-group">
-										<input
-											class="input--style-6"
-											type="text"
-											name="student-id"
-											placeholder="student id"
-											id="student_id"
-										/>
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="name">Room Number</div>
-								<div class="value">
-									<div class="input-group">
-										<input
-											class="input--style-6"
-											type="text"
-											name="room-number"
-											placeholder="room number"
-											id="room_number"
-										/>
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="name">Report Message</div>
-								<div class="value">
-									<div class="input-group">
-										<textarea
-											class="textarea--style-6"
-											name="message"
-											placeholder="Make a report here"
-                                            id="message"
-										></textarea>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="form-row">
-                            <div class="name">Upload CV</div>
-                            <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
-                                    <label class="label--file" for="file">Choose file</label>
-                                    <span class="input-file__info">No file chosen</span>
-                                </div>
-                                <div class="label--desc">Upload your CV/Resume or any other relevant file. Max file size 50 MB</div>
-                            </div>
-                        </div> -->
-						</form>
-					</div>
-					<div class="card-footer">
-						<input
-							class="btn btn--radius-2 btn--blue-2"
-							type="submit"
-							onclick="validate()"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-
-        <!-- Script file -->
-		<script src="app.js">
-			
-		</script>
-	</body>
+	<script src="app.js"></script>
+  </body>
 </html>
