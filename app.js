@@ -8,7 +8,7 @@ const alert_head = document.getElementById("alert_head");
 
 let savedReports = []
 
-const storedReports = JSON.parse(localStorage.getItem("reports"));
+const storedReports = JSON.parse(localStorage.getItem("savedReports"));
 
 const validate = () => {
 
@@ -62,11 +62,6 @@ const validate = () => {
 		alertMessage.style.color = "#a94442";
 	}
 
-	name.value = "";
-	student_id.value = "";
-	room_number.value = "";
-	message.value = "";
-
 	storeReports()
 
 };
@@ -80,5 +75,7 @@ const storeReports = () => {
 	}
 
 	savedReports.push(report);
-	localStorage.setItem("reports", JSON.stringify(savedReports));
+	localStorage.setItem("savedReports", JSON.stringify(savedReports));
+
+	console.log(savedReports);
 }
