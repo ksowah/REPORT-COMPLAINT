@@ -5,8 +5,6 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
-const username = document.getElementById("username");
-const password = document.getElementById("password");
 
 let savedReports = []
 
@@ -86,9 +84,4 @@ const storeReports = () => {
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
 }
 
-const login = () => {
-	if (username.value === "admin" && password.value === "password") {
-		window.location.href = "admin.html"; //redirect to admin page
-	}
-}
 
