@@ -10,6 +10,10 @@ let savedReports = []
 
 const storedReports = JSON.parse(localStorage.getItem("savedReports"));
 
+if(storedReports) {
+	savedReports = storedReports;
+}
+
 const validate = () => {
 
 	let valid = null
@@ -67,7 +71,7 @@ const validate = () => {
 };
 
 const storeReports = () => {
-	const report = {
+	let report = {
 		name: name.value,
 		student_id: student_id.value,
 		room_number: room_number.value,
@@ -75,7 +79,8 @@ const storeReports = () => {
 	}
 
 	savedReports.push(report);
+	report = {}
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
-
-	console.log(savedReports);
 }
+
+console.log(storedReports);
