@@ -6,6 +6,8 @@ const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
 
+let savedReports = []
+
 const validate = () => {
 
 	let valid = null
