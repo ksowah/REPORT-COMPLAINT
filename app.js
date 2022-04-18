@@ -12,6 +12,7 @@ const storedReports = JSON.parse(localStorage.getItem("savedReports"));
 
 if(storedReports) {
 	savedReports = storedReports;
+	console.log(savedReports);
 }
 
 const validate = () => {
@@ -83,4 +84,3 @@ const storeReports = () => {
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
 }
 
-console.log(storedReports);
