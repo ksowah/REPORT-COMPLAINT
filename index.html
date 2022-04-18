@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact us</title>
+    <title>Report</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
     <style>
@@ -9,23 +9,35 @@
     </style>
   </head>
   <body>
-    <form  class="decor">
-		<div class="alert" role="alert" id="alert">
-			<strong id="alert_head"> </strong> 
-		<span id="error"></span>
-	</div>
-      <div class="form-left-decoration"></div>
-      <div class="form-right-decoration"></div>
-      <div class="circle"></div>
-      <div class="form-inner">
-        <h1>Contact us</h1>
-        <input type="text" placeholder="Name" id="name">
-        <input type="text" placeholder="Student id" id="student_id">
-        <input type="text" placeholder="Room Number" id="room_number">
-        <textarea placeholder="Report Message..." rows="5" id="message"></textarea>
-        <button type="button" onclick="validate()">Submit</button>
-      </div>
-    </form>
+
+    <div class="admin">
+      <a href="admin.html">
+        <button>
+          ADMIN
+        </button>
+      </a>
+    </div>
+
+
+    <div class="container">
+      <form  class="decor">
+      <div class="alert" role="alert" id="alert">
+        <strong id="alert_head"> </strong> 
+      <span id="error"></span>
+    </div>
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+          <h1>Contact us</h1>
+          <input type="text" placeholder="Name" id="name">
+          <input type="text" placeholder="Student id" id="student_id">
+          <input type="text" placeholder="Room Number" id="room_number">
+          <textarea placeholder="Report Message..." rows="5" id="message"></textarea>
+          <button class="submit" type="button" onclick="validate()">Submit</button>
+        </div>
+      </form> 
+    </div>
 
 	<script src="app.js"></script>
   </body>

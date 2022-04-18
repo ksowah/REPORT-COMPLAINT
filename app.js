@@ -6,6 +6,10 @@ const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
 
+let savedReports = []
+
+const storedReports = JSON.parse(localStorage.getItem("savedReports"));
+
 const validate = () => {
 
 	let valid = null
@@ -58,4 +62,20 @@ const validate = () => {
 		alertMessage.style.color = "#a94442";
 	}
 
+	storeReports()
+
 };
+
+const storeReports = () => {
+	const report = {
+		name: name.value,
+		student_id: student_id.value,
+		room_number: room_number.value,
+		message: message.value
+	}
+
+	savedReports.push(report);
+	localStorage.setItem("savedReports", JSON.stringify(savedReports));
+
+	console.log(savedReports);
+}
