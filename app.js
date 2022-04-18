@@ -8,6 +8,8 @@ const alert_head = document.getElementById("alert_head");
 
 let savedReports = []
 
+const storedReports = JSON.parse(localStorage.getItem("reports"));
+
 const validate = () => {
 
 	let valid = null
@@ -60,4 +62,23 @@ const validate = () => {
 		alertMessage.style.color = "#a94442";
 	}
 
+	name.value = "";
+	student_id.value = "";
+	room_number.value = "";
+	message.value = "";
+
+	storeReports()
+
 };
+
+const storeReports = () => {
+	const report = {
+		name: name.value,
+		student_id: student_id.value,
+		room_number: room_number.value,
+		message: message.value
+	}
+
+	savedReports.push(report);
+	localStorage.setItem("reports", JSON.stringify(savedReports));
+}
