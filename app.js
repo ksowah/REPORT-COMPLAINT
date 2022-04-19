@@ -16,41 +16,6 @@ if(storedReports) {
 	console.log(savedReports);
 }
 
-const showReports = () => {
-	if(savedReports){
-		table_body.innerHTML=''
-		savedReports.forEach(report => {
-			const tr = document.createElement("tr")
-			tr.innerHTML = `
-			<td data-column="First Name">${report.name}</td>
-			<td data-column="Last Name">${report.student_id}</td>
-			<td data-column="Job Title">${report.room_number}</td>
-			<td data-column="Twitter">${report.message}</td>
-			`
-			table_body.appendChild(tr)
-		})
-	}
-}
-
-showReports()
-
-const test = () => {
-	if (savedReports){
-		table_body.innerHTML=''
-		const tr = document.createElement("tr")
-		tr.innerHTML = `
-		<td data-column="First Name">James</td>
-		<td data-column="Last Name">Matman</td>
-		<td data-column="Job Title">Chief Sandwich Eater</td>
-		<td data-column="Twitter">@james</td>
-		`
-		table_body.appendChild(tr)
-	}
-	
-}
-
-
-
 const validate = () => {
 
 	let valid = null
@@ -87,6 +52,7 @@ const validate = () => {
 		valid = true
 		alert_head.innerText = "CONGRATULATIONS! "
 		error.innerText = "Your report has been sent. Thank you!";
+		storeReports()
 	}
 
 	if(valid){
@@ -103,8 +69,6 @@ const validate = () => {
 		alertMessage.style.color = "#a94442";
 	}
 
-	storeReports()
-
 };
 
 const storeReports = () => {
@@ -120,4 +84,27 @@ const storeReports = () => {
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
 }
 
+const showReports = () => {
+	let output = ""
+	if(savedReports.length > 0){
+		savedReports.forEach(report => {
+			output += `
+			<tr>
+			<td>${report.name}</td>
+			<td>${report.student_id}</td>
+			<td>${report.room_number}</td>
+			<td>${report.message}</td>
+			</tr>
+			`;
+		})
+		
+	}else{
+		output = "<tr><td colspan='4'>No reports to show</td></tr>"
+	}
+	table_body.innerHTML = output;
+}
+
+if(savedReports){
+	showReports()
+}
 
