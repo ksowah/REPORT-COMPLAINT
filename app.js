@@ -5,6 +5,7 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
+const table_body = document.getElementById("table_body");
 
 let savedReports = []
 
@@ -14,6 +15,41 @@ if(storedReports) {
 	savedReports = storedReports;
 	console.log(savedReports);
 }
+
+const showReports = () => {
+	if(savedReports){
+		table_body.innerHTML=''
+		savedReports.forEach(report => {
+			const tr = document.createElement("tr")
+			tr.innerHTML = `
+			<td data-column="First Name">${report.name}</td>
+			<td data-column="Last Name">${report.student_id}</td>
+			<td data-column="Job Title">${report.room_number}</td>
+			<td data-column="Twitter">${report.message}</td>
+			`
+			table_body.appendChild(tr)
+		})
+	}
+}
+
+showReports()
+
+const test = () => {
+	if (savedReports){
+		table_body.innerHTML=''
+		const tr = document.createElement("tr")
+		tr.innerHTML = `
+		<td data-column="First Name">James</td>
+		<td data-column="Last Name">Matman</td>
+		<td data-column="Job Title">Chief Sandwich Eater</td>
+		<td data-column="Twitter">@james</td>
+		`
+		table_body.appendChild(tr)
+	}
+	
+}
+
+
 
 const validate = () => {
 
