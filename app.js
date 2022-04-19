@@ -5,6 +5,7 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
+const table_body = document.getElementById("table_body");
 
 let savedReports = []
 
@@ -51,6 +52,7 @@ const validate = () => {
 		valid = true
 		alert_head.innerText = "CONGRATULATIONS! "
 		error.innerText = "Your report has been sent. Thank you!";
+		storeReports()
 	}
 
 	if(valid){
@@ -67,8 +69,6 @@ const validate = () => {
 		alertMessage.style.color = "#a94442";
 	}
 
-	storeReports()
-
 };
 
 const storeReports = () => {
@@ -84,4 +84,27 @@ const storeReports = () => {
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
 }
 
+const showReports = () => {
+	let output = ""
+	if(savedReports.length > 0){
+		savedReports.forEach(report => {
+			output += `
+			<tr>
+			<td>${report.name}</td>
+			<td>${report.student_id}</td>
+			<td>${report.room_number}</td>
+			<td>${report.message}</td>
+			</tr>
+			`;
+		})
+		
+	}else{
+		output = "<tr><td colspan='4'>No reports to show</td></tr>"
+	}
+	table_body.innerHTML = output;
+}
+
+if(savedReports){
+	showReports()
+}
 
