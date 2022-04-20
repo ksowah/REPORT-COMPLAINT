@@ -53,6 +53,10 @@ const validate = () => {
 		alert_head.innerText = "CONGRATULATIONS! "
 		error.innerText = "Your report has been sent. Thank you!";
 		storeReports()
+		name.value = ""
+		student_id.value = ""
+		room_number.value = ""
+		message.value = ""
 	}
 
 	if(valid){
