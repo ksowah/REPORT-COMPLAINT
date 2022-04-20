@@ -16,8 +16,7 @@
   }
 
   body {
-  background-color: #8989bb;
-background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
+    background-color: rgb(247, 239, 239);
   }
 
   .container {
@@ -39,6 +38,7 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
   width: 80%;
   border-radius: 30px;
   background: #fff;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .form-inner {
