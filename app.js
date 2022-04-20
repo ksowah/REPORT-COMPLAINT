@@ -5,17 +5,17 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const alertMessage = document.getElementById("alert");
 const alert_head = document.getElementById("alert_head");
-const table_body = document.getElementById("table_body");
 
 let savedReports = []
 
+// keep all reports in an array from local storage to persist the data
 const storedReports = JSON.parse(localStorage.getItem("savedReports"));
-
 if(storedReports) {
 	savedReports = storedReports;
 	console.log(savedReports);
 }
 
+// validate form
 const validate = () => {
 
 	let valid = null
@@ -71,6 +71,7 @@ const validate = () => {
 
 };
 
+// store all the data in local storage and push each item in the array
 const storeReports = () => {
 	let report = {
 		name: name.value,
@@ -84,27 +85,6 @@ const storeReports = () => {
 	localStorage.setItem("savedReports", JSON.stringify(savedReports));
 }
 
-const showReports = () => {
-	let output = ""
-	if(savedReports.length > 0){
-		savedReports.forEach(report => {
-			output += `
-			<tr>
-			<td>${report.name}</td>
-			<td>${report.student_id}</td>
-			<td>${report.room_number}</td>
-			<td>${report.message}</td>
-			</tr>
-			`;
-		})
-		
-	}else{
-		output = "<tr><td colspan='4'>No reports to show</td></tr>"
-	}
-	table_body.innerHTML = output;
-}
 
-if(savedReports){
-	showReports()
-}
+
 
