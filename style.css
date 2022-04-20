@@ -16,17 +16,32 @@
   }
 
   body {
-  background-color: #8989bb;
-background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
+  background-color: rgb(255, 255, 255);
   }
 
   .container {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  }
+
+  .logo_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title{
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .tracker{
+    color: #a5a4cb;
   }
 
   h1 {
@@ -39,6 +54,8 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
   width: 80%;
   border-radius: 30px;
   background: #fff;
+  border: 1px solid #ecdfdf;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .form-inner {
@@ -71,6 +88,7 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
   color: #fff;
   cursor: pointer;
   }
+
   button:hover {
   background: #8989bb;
   } 
@@ -81,6 +99,22 @@ background-image: linear-gradient(315deg, #8989bb 0%, #a5a4cb 74%);
     display: flex;
     align-items: right;
     justify-content: flex-end;
+  }
+
+  .admin-btn{
+    padding: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    background: #a5a4cb;
+    border: none;
+    color: rgb(255, 253, 253);
+    font-weight: 500;
+    border-radius: 10px;
+  }
+
+  .admin-btn:hover {
+    background: #8989bb;
   }
 
   .alert {
